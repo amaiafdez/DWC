@@ -1,0 +1,29 @@
+<!doctype html public "-//w3c//dtd html 4.01//en"
+   "http://www.w3.org/tr/html4/strict.dtd">
+<html>
+   
+   <head>
+        <script language='javascript'>
+        function saludo() {
+          var horario = new Date();
+          var hora = horario.getHours();
+          if( hora < 12 ) {
+              var mensaje = 'Buenos dias!';
+          }else if (hora >= 12  && hora <= 19) {
+              var mensaje = 'Buenas tardes!';
+          } else {
+              var mensaje = 'Buenas noches!';
+          }
+          mensaje = '¡Hola Mundo. ' + mensaje;
+          return mensaje;
+        }
+        </script>
+</head>
+<body>
+<script language='javascript'>
+  document.write(saludo());
+</script>
+</body>
+
+
+</html>

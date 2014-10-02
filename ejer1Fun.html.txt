@@ -1,0 +1,24 @@
+<!doctype html public "-//w3c//dtd html 4.01//en"
+   "http://www.w3.org/tr/html4/strict.dtd">
+<html>
+   <head>
+      <title>FUNCIONES -  Ejercicio 1</title>
+
+	  <script type="text/javascript">
+			function parImpar(numero){
+				if(numero%2==0){
+					  alert("El número " + numero + " es par");	
+				}else{
+					 alert("El número " + numero + " es impar");	
+				}
+			}
+			
+			parImpar(15);
+			parImpar(20);
+			
+     </script>
+   </head>
+   <body>
+
+   </body>
+</html>

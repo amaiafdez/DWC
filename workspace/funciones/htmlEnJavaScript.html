@@ -1,0 +1,22 @@
+<!doctype html public "-//w3c//dtd html 4.01//en"
+   "http://www.w3.org/tr/html4/strict.dtd">
+<html>
+   
+   <head>
+</head>
+<body>
+<div id='contenedor' name='contenedor'></div>
+  <script language='javascript' type='text/javascript'>
+     var dias = new Array('Lunes','Martes','Miércoles','Jueves',
+                      'Viernes', 'Sábado', 'Domingo');
+     var HTML = '<ul>';
+     for(i = 0; i < dias.length; i++) {
+     HTML += '<li>' + dias[i] + '</li>';
+     }
+     HTML += '</ul>';
+     document.getElementById('contenedor').innerHTML = HTML;
+  </script>
+</body>
+
+
+</html>

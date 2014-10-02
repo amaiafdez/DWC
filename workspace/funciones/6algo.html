@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 6</title>
+
+<script type="text/javascript">
+	var num = 0;
+	 function crear(objeto) {
+		num++;
+	   var fi = document.getElementById('contenedor');
+	   var contenedor = document.createElement('div');
+		contenedor.id = 'div' + num;
+		contenedor.className = 'codigoCorto';
+		fi.insertBefore(contenedor, objeto);
+	   var elemento = document.createElement('input'); 
+	   elemento.type = 'file';
+	   elemento.name = 'archivo' + num;
+		elemento.size = 40;
+	   contenedor.appendChild(elemento); 
+	   document.write(contenedor) ;
+	 }
+
+	 function borrar() {
+	    var elemento = document.getElementById('contenedor');
+	    while (elemento.firstChild) {
+	      elemento.removeChild(elemento.firstChild); 
+	    }
+	 }
+
+
+</script>
+
+</head>
+ 
+<body>
+
+<button onclick='crear(contenedor);'>crear</button>
+<div id='contenedor'>wfdsfd</div>
+
+<button onclick="borrar();">borrar</button>
+
+</body>
+</html>
+
+
+
+

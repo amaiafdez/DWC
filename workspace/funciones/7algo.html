@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Propiedad de los Objetos</title>
+<link href='0402ObjectPropiedades.css' rel='stylesheet' type='text/css' />
+<meta http-equiv='content-type' content='text/html; charset=iso-8859-1' />
+<script type='text/javascript'>
+	
+function propiedades( objeto ){
+  object = new Object(eval( objeto ));
+  var cadena = '<table class='tabla'>';
+  cadena += 'Propiedades de ' + objeto;
+  cadena += '<th>Número</th>';
+  cadena += '<th>Propiedad</th>';
+  cadena += '<th>Valor</th>';
+  var i = 0;
+  for(p in object){
+    cadena += '<tr>';
+    cadena += '<td>' + i + '</td>';
+    cadena += '<td>' + p + '</td>';
+    cadena += '<td>' + object[p] + '</td>';
+    cadena += '</tr>';
+    i++;
+  }
+  cadena += '</table>';
+  var elemento = document.getElementById('contenedor');
+  elemento.innerHTML = cadena;
+}
+
+
+
+</script>
+</head>
+<body>
+<form name='forma' method='post' action='#'>
+    <div align='center'>
+	Objeto:
+	  <select name='objetos' id='objetos' 
+             onChange='propiedades(window.document.forms[0][0].value)'>
+	    <option value='document'>document</option>
+	    <option value='event'>event</option>
+	    <option value='history'>history</option>
+	    <option value='location'>location</option>
+	    <option value='navigator'>navigator</option>
+	    <option value='screen'>screen</option>
+	    <option value='window'>window</option>
+      </select>
+    </div>
+    </form>
+    <div id='contenedor' class='centrado'></div>
+</body>
+</html>
+
+
+
+

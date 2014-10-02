@@ -1,0 +1,23 @@
+<!doctype html public "-//w3c//dtd html 4.01//en"
+   "http://www.w3.org/tr/html4/strict.dtd">
+<html>
+   
+<head>
+  <title>getElementById</title>
+  <script type='text/javascript'> 
+    function cambiarColor( color ) { 
+      var elemento = document.getElementById('parrafo');
+      elemento.style.font = 'bold italic 16 pt Verdana';
+      elemento.style.color = color; 
+    }
+  </script> 
+</head> 
+<body> 
+  <p id='parrafo'>Mis colores favoritos. ¿Adivina por qué?</p> 
+   <button onclick = "cambiarColor('blue');">Azul</button> 
+   <button onclick = "cambiarColor('red');">Rojo</button> 
+</body>
+
+
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 5</title>
+
+<script type="text/javascript">
+
+	var n = 0;
+	function sumarHijo() {
+  	n++;
+  	if( n <= 6) { 	
+  	  var nuevoElemento = document.createElement('div');
+	  if(n <= 5) {
+	    nuevoElemento.innerHTML = 'mi color favorito';
+	    nuevoElemento.style.color = 'red';
+	  } else if ( n == 6) {
+	      nuevoElemento.innerHTML = 'No abuses';
+	      nuevoElemento.style.color = 'blue';
+		   nuevoElemento.style.fontSize = '40px';
+	  }
+	    var contenedor = document.getElementById('contenedor');
+	    contenedor.appendChild(nuevoElemento);
+	  }
+	}
+
+</script>
+
+</head>
+ 
+<body>
+
+<button onclick="sumarHijo();">Sumar un nuevo elemento </button>
+<div id='contenedor'></div>
+
+</body>
+</html>
+
+
+
+

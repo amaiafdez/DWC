@@ -1,0 +1,2 @@
+INDEX VERSION 1.122+D:\AMAIA\DWC\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2950284601.index
