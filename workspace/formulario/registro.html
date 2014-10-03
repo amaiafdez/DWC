@@ -7,32 +7,71 @@
     <title>Validación un formulario</title>
     <script type="text/javascript">
       function valida(f) {
-        var ok = true;
+        var msg="";
         var usuario= document.getElementById("usuario");
         var contra= document.getElementById("contra");
         var contra2= document.getElementById("contra2");
-        if(f.elements[0].value == "")
+        var mail= document.getElementById("mail");
+        var sexo= document.getElementById("sexo");
+        var fecha_nac= document.getElementById("fecha_nac");
+        var english = /^[A-Za-z0-9]*$/;
+        if(usuario.length <3 || usuario.length>15)
         {
-          msg += "- Jugador 1\n";
-          ok = false;
+          alert("El usuario tiene que tener más de 3 caracteres o menos de 15");
+        }else{
+          if(!english.test(contra))
+          {
+            alert("El usuario debe tener caracteres del alfabeto inglés");
+          }
+        }        
+        if(contra.length<6 || contra.length>15)
+        {
+          alert("La contraseña debe tener como mínimo 6 caracteres y como máximo 15");
+        }else{
+          if(!english.test(contra))
+          {
+            alert("La contraseña debe tener caracteres del alfabeto inglés");
+          }
         }
 
-        if(f.elements["jugador2"].value == "")
+        if(contra != contra2)
         {
-          msg += "- Jugador 2\n";
-          ok = false;
+          alert("Las contraseñas tienen que coincidir");
         }
+        var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !expr.test(email) )
+          alert("Error: La dirección de correo " + email + " es incorrecta.");
+        } 
 
-        if(f.jugador3.value == "")
+        if(sexo == "hombre" || sexo = "mujer")
         {
-          msg += "- Jugador 3\n";
-          ok = false;
+          alert("El sexo debe ser hombre o mujer");
         }
-
-        if(ok == false){
-          alert(msg);
+        if(validarFormatoFecha(fecha)){
+          if(!existeFecha(fecha)){
+            alert("La fecha introducida no existe.");
+          }
+        }else{
+          alert("El formato de la fecha es incorrecto.");
         }
-        return ok;
+      }
+      function existeFecha(fecha){
+        var fechaf = fecha.split("/");
+        var day = fechaf[0];
+        var month = fechaf[1];
+        var year = fechaf[2];
+        var date = new Date(year,month,'0');
+        if((day-0)>(date.getDate()-0)){
+              return false;
+        }
+        return true;
+      } 
+      function existeFecha2 (fecha) {
+        var fechaf = fecha.split("/");
+        var d = fechaf[0];
+        var m = fechaf[1];
+        var y = fechaf[2];
+        return m > 0 && m < 13 && y > 0 && y < 32768 && d > 0 && d <= (new Date(y, m, 0)).getDate();
       }
     </script>
   </head>
@@ -50,7 +89,7 @@
         <br />
         Sexo: <input type="text" id="sexo" />
         <br />
-        Fecha nacimiento: <input type="text" id="fecha_nac" />
+        Fecha nacimiento (DD/MM/AAAA): <input type="text" id="fecha_nac" />
         <br />
         <input type="submit" value="Enviar" />
         <input type="reset" value="Borrar" />
