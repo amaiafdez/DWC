@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+  <head>
+    
+    <title>Ejer 2</title>
+    <script type="text/javascript">  
+      var cadena = "En un lugar de la Mancha de cuyo nombre no quiero acordarme.";
+      var frase;
+      var array = cadena.split();
+      alert(array.join());
+      for(var i=0; i<array.length;i++){
+        if(array[i] == "a"){
+          alert("hola");
+          break;
+        }else{
+          alert("holad");
+          frase = frase.concat(array[i]);
+          continue;
+        }
+      }
+      alert(frase);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

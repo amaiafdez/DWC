@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ejer</title>
+<meta http-equiv='content-type' content='text/html; charset=iso-8859-1' />
+
+<script language="JavaScript">
+
+	function suma(button){
+		var num1=parseInt(document.form1.numero1.value);
+		var num2=parseInt(document.form1.numero2.value);
+		var res=0;
+		res=num1+num2;
+		document.getElementById("res").value=res;
+	}
+	function resta(button){
+		var num1=parseInt(document.form1.numero1.value);
+		var num2=parseInt(document.form1.numero2.value);
+		var res=0;
+		res=num1-num2;
+		document.getElementById("res").value=res;
+	}
+	function multi(button){
+		var num1=parseInt(document.form1.numero1.value);
+		var num2=parseInt(document.form1.numero2.value);
+		var res=0;
+		res=num1*num2;
+		document.getElementById("res").value=res;
+	}
+	function div(button){
+		var num1=parseInt(document.form1.numero1.value);
+		var num2=parseInt(document.form1.numero2.value);
+		var res=0;
+		res=num1/num2;
+		document.getElementById("res").value=res;
+	}
+</script>
+</head>
+<body>
+
+
+<form name="form1">
+	<input type="text" name="numero1"><br>
+	<input type="text" name="numero2"><br>
+	<input type="button" value="+" onclick="suma(this)">
+	<input type="button" value="-" onclick="resta(this)">
+	<input type="button" value="x" onclick="multi(this)">
+	<input type="button" value="/" onclick="div(this)"><br>
+	<input type="text" id="res"><br>
+</form>
+
+
+
+</body>
+</html>
